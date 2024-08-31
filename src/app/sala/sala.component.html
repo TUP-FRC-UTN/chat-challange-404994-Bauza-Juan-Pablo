@@ -1,0 +1,29 @@
+<div class="container align-self-center col-8">
+    <div class="row mt-5 mb-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    Sala de Chat
+                </div>
+                <div class="card-body chat-container">
+                    @for(message of chat; track $index){
+                    <p class="textMessage my-1" [ngClass]="{
+                        'textPrimary': message.user == 'Pepe',
+                        'textSecondary' : message.user == 'María'
+                    }">
+                        {{message.user + ": " +message.text}}
+                    </p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <app-usuario user="Pepe" (postMessage)="addMessage($event)"></app-usuario>
+        </div>
+        <div class="col-md-6">
+            <app-usuario user="María" (postMessage)="addMessage($event)"></app-usuario>
+        </div>
+    </div>
+</div>
