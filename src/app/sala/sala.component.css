@@ -1,0 +1,31 @@
+.chat-container {
+  height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.textPrimary {
+  color: #fff;
+  background-color: #21aa02;
+}
+
+.textSecondary {
+  color: #fff;
+  background-color: #1758ba;
+}
+
+.textMessage {
+  border-radius: 1rem;
+  --bs-badge-padding-x: 0.65em;
+  --bs-badge-padding-y: 0.35em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  display: table;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  white-space: break-spaces;
+  vertical-align: baseline;
+}
