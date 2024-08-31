@@ -7,16 +7,12 @@
                 </div>
                 <div class="card-body chat-container">
                     @for(message of chat; track $index){
-                    @if(message.user == "Pepe"){
-                    <p class="textMessage my-1 textPrimary">
+                    <p class="textMessage my-1" [ngClass]="{
+                        'textPrimary': message.user == 'Pepe',
+                        'textSecondary' : message.user == 'María'
+                    }">
                         {{message.user + ": " +message.text}}
                     </p>
-                    }
-                    @else{
-                    <p class="textMessage  my-1 textSecondary">
-                        {{message.user + ": " + message.text}}
-                    </p>
-                    }
                     }
                 </div>
             </div>
